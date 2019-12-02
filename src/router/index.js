@@ -5,63 +5,62 @@ import Home from '../views/Home.vue'
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: '/',
-    name: 'home',
-      meta: {
-        canTo: true,
-          title: 'HOME 页面'
-      },
-    component: Home
-  },
-  {
-    path: '/demo',
-    name: 'demo',
-    component: () => import(/* webpackChunkName: "about" */ '../views/demo.vue')
-  },
-  {
-    path: '/about',
-    name: 'about',
-      meta: {
-          canTo: true,
-          title: 'ABOUT 页面'
-      },
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  },
-  {
-    path: '/slotDefault',
-    name: 'slotDefault',
-      meta: {
-          canTo: true,
-          title: 'slotDefault 页面'
-      },
-    component: () => import(/* webpackChunkName: "about" */ '../views/slots/default.vue')
-  },
-  {
-    path: '/slotName',
-    name: 'slotName',
-      meta: {
-          canTo: true,
-          title: 'slotName 页面'
-      },
-    component: () => import(/* webpackChunkName: "about" */ '../views/slots/name.vue')
-  },
-  {
-    path: '/slotScope',
-    name: 'slotScope',
-      meta: {
-          canTo: true,
-          title: 'slotScope 页面'
-      },
-    component: () => import(/* webpackChunkName: "about" */ '../views/slots/scope.vue')
-  }
+    {
+        path: '/',
+        name: 'home',
+        meta: {
+            canTo: true,
+            title: 'HOME 页面'
+        },
+        component: Home
+    },
+    {
+        path: '/demo',
+        name: 'demo',
+        component: () => import(/* webpackChunkName: "about" */ '../views/demo.vue')
+    },
+    {
+        path: '/about',
+        name: 'about',
+        meta: {
+            canTo: true,
+            title: 'ABOUT 页面'
+        },
+        component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    },
+    {
+        path: '/slotDefault',
+        name: 'slotDefault',
+        meta: {
+            canTo: true,
+            title: 'slotDefault 页面'
+        },
+        component: () => import(/* webpackChunkName: "about" */ '../views/slots/default.vue')
+    },
+    {
+        path: '/slotName',
+        name: 'slotName',
+        meta: {
+            canTo: true,
+            title: 'slotName 页面'
+        },
+        component: () => import(/* webpackChunkName: "about" */ '../views/slots/name.vue')
+    },
+    {
+        path: '/slotScope',
+        name: 'slotScope',
+        meta: {
+            canTo: true,
+            title: 'slotScope 页面'
+        },
+        component: () => import(/* webpackChunkName: "about" */ '../views/slots/scope.vue')
+    }
 ]
 
 const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes,
-
+    mode: 'history',
+    base: process.env.BASE_URL,
+    routes
 })
 // TODO： 路由钩子函数
 // TODO: 进入任意页面路由之前的时候触发
