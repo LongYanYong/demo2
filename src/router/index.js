@@ -54,6 +54,15 @@ const routes = [
           title: 'slotScope 页面'
       },
     component: () => import(/* webpackChunkName: "about" */ '../views/slots/scope.vue')
+  },
+  {
+      path: '/elementForm',
+      name: 'elementForm',
+      meta: {
+          canTo: true,
+          title: 'elementForm 页面'
+      },
+      component: () => import(/* webpackChunkName: "about" */ '../views/pages/Form.vue')
   }
 ]
 

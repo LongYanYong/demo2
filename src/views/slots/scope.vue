@@ -14,7 +14,7 @@
 <script>
     import slotComponents from './components'
     export default {
-        name: "name",
+        name: 'name',
         components: {slotComponents},
         data() {
             return {
