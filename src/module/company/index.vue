@@ -62,16 +62,6 @@ export default {
         },
         httpGetTable() {
             const params = Object.assign({}, this.form, this.pager)
-            console.log(params)
-            const num = parseInt(Math.random() * 100)
-            setTimeout(() => {
-                this.companyList = [
-                    { id: 1, code: 2222, name: '公司' + num, number: num, time: '2016-20-5', operation: '详情' },
-                    { id: 2, code: 1111, name: '公司' + num, number: num, time: '2016-20-5', operation: '详情' },
-                    { id: 3, code: 3333, name: '公司' + num, number: num, time: '2016-20-5', operation: '详情' }
-                ]
-                this.total = parseInt(Math.random() * 100)
-            }, 200)
             this.$http.post(this.$service.companyPagingQuery, {params}).then(res => {
                 this.companyList = res.data.data;
                 this.total = res.data.total;

@@ -166,7 +166,7 @@ const checkStatus = (response) => {
   // loading
   // 如果http状态码正常，则直接返回数据
   if (response && (response.status === 200 || response.status === 304 || response.status === 400)) {
-    return response.data
+    return response.data.data
     // 如果不需要除了data之外的数据，可以直接 return response.data
   }
   return {
