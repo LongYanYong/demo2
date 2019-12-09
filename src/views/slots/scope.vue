@@ -10,14 +10,14 @@
 </template>
 
 <script>
-import slotComponents from './components'
-export default {
-    name: 'name',
-    components: { slotComponents },
-    data() {
-        return {
-            name: 'three'
+    import slotComponents from './components';
+    export default {
+        name: 'name',
+        components: {slotComponents},
+        data() {
+            return {
+                name: 'three'
+            }
         }
     }
-}
 </script>

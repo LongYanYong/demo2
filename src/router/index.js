@@ -54,6 +54,51 @@ const routes = [
             title: 'slotScope 页面'
         },
         component: () => import(/* webpackChunkName: "about" */ '../views/slots/scope.vue')
+    },
+    {
+        path: '/elementForm',
+        name: 'elementForm',
+        meta: {
+            canTo: true,
+            title: 'elementForm 页面'
+        },
+        component: () => import(/* webpackChunkName: "about" */ '../views/pages/Form.vue')
+    },
+    {
+        path: '/formValidation',
+        name: 'formValidation',
+        meta: {
+            canTo: true,
+            title: '表单验证页面'
+        },
+        component: () => import(/* webpackChunkName: "about" */ '../views/pages/formValidation.vue')
+    },
+    {
+        path: '/formRules',
+        name: 'formRules',
+        meta: {
+            canTo: true,
+            title: '表单验证页面2'
+        },
+        component: () => import(/* webpackChunkName: "about" */ '../views/pages/formRules.vue')
+    },
+    {
+        path: '/companyList',
+        name: 'companyList',
+        meta: {
+            canTo: true,
+            title: '公司列表页面'
+        },
+        component: () => import(/* webpackChunkName: "about" */ '../module/company/index.vue')
+    },
+    {
+        path: '/companyDetails',
+        name: 'companyDetails',
+        meta: {
+            canTo: true,
+            title: '公司详情'
+        },
+        component: () => import(/* webpackChunkName: "about" */ '../module/company/details/index.vue')
     }
 ]
 
