@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>快速排序</title>
+    </head>
+    <body>
+        <script>
+            function quickSort1(arr) {
+                if (arr.length <= 1) {
+                    return arr
+                }
+                let first = arr[0],
+                    data = {
+                        less: [],
+                        greater: []
+                    };
+                for (let i = 1; i < arr.length; i++) {
+                    if (arr[i] > first) {
+                        data.greater.push(arr[i]);
+                    } else {
+                        data.less.push(arr[i]);
+                    }
+                };
+                return [...[], ...quickSort1(data.less), ...[first], ...quickSort1(data.greater)]
+            }
+            console.log(quickSort1([1, 11, 2, 22, 3, 33, 4, 44, 5, 55]))
+
+            function quickSort2(arr) {
+                if (arr.length <= 1) {
+                    return arr
+                }
+                let first = arr[0],
+                    data = {
+                        less: [],
+                        greater: [],
+                        equal: []
+                    };
+                for (let i = 1; i < arr.length; i++) {
+                    if (arr[i] > first) {
+                        data.greater.push(arr[i]);
+                    } else if (arr[i] === first) {
+                        data.equal.push(arr[i]);
+                    } else {
+                        data.less.push(arr[i]);
+                    }
+                };
+                data.equal.push(first);
+                return [...[], ...quickSort2(data.less), ...data.equal, ...quickSort2(data.greater)]
+            }
+            console.log(quickSort2([1, 11, 2, 22, 3, 33, 4, 44, 5, 55]))
+        </script>
+    </body>
+</html>

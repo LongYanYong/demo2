@@ -27,8 +27,9 @@ export default {
         return {
             name: 'three'
         }
+    },
+    methods: {
+    
     }
 }
 </script>
-
-<style scoped></style>

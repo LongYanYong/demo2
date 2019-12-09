@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>selectSort</title>
+</head>
+<body>
+<script>
+    const sortArr = [1, 11, 2, 2, 2, 2, 2, 2, 2, 22, 3, 3, 3, 3, 3, 3, 33, 4, 44, 5, 55];
+    function selectSort(arr) {
+        for(let i = 0; i < arr.length - 1; i++) {
+            let minIndex = i;
+            for(let j = i; j < arr.length; j++) {
+                arr[j] < arr[minIndex] && (minIndex =  j);
+            }
+            [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
+        }
+        return arr
+    }
+    console.log(selectSort(sortArr));
+</script>
+</body>
+
+</html>
