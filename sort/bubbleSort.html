@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>冒泡排序</title>
+    </head>
+    <body>
+        <script>
+            const sortArr = [1, 11, 2, 2, 2, 2, 2, 2, 2, 22, 3, 3, 3, 3, 3, 3, 33, 4, 44, 5, 55];
+            function bubbleSort(arr) {
+                let len = arr.length,
+                    count = 0;
+                for (let i = 0; i < len - 1; i++) {
+                    let hasChange = false;
+                    for (let j = 0; j < len - 1 - i; j++) {
+                        count++;
+                        // 相邻元素两两对比，元素交换，大的元素交换到后面
+                        if (arr[j] > arr[j + 1]) {
+                            // TODO: 1  借助变量进行变量值交换
+                            // var temp = arr[j];
+                            // arr[j] = arr[j+1];
+                            // arr[j+1] = temp;
+                            // TODO: 2 利用结构赋值进行变量值交换； 优点： 适用于其他类型的变量进行互换 推荐！！！
+                            [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]]
+                            // TODO: 3 位运算的技巧，利用 a ^ b ^ b == a 的特点，进行数值交换
+                            // arr[j] = arr[j] ^ arr[j + 1];
+                            // arr[j+1] = arr[j] ^ arr[j + 1];
+                            // arr[j] = arr[j] ^ arr[j + 1];
+                            // TODO: 4 算术运算进行变量值交换
+                            // arr[j] = arr[j] + arr[j + 1]; // 2, 3  + 5
+                            // arr[j + 1] = arr[j] - arr[j + 1]; // 5 -3  2
+                            // arr[j] = arr[j] - arr[j + 1]; // 5-2 = 3
+                            // TODO: 5 数组特性进行变量值交换
+                            // arr[j] = [arr[j], arr[j + 1]];
+                            // arr[j + 1] = arr[j][0];
+                            // arr[j] = arr[j][1];
+
+                            !hasChange && (hasChange = true);
+                        }
+                    }
+                    if (!hasChange) {
+                        break;
+                    }
+                }
+                arr.push('count:' + count);
+                return arr
+            }
+            console.log(bubbleSort(sortArr))
+        </script>
+    </body>
+</html>
