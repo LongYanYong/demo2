@@ -15,24 +15,20 @@
 <script>
 export default {
     props: {
-      total: {  type: Number,
-		      default: 0
-      },
-		  pager: {   type: Object,
-				  default: () => ({pageSize: 10, pageNo: 1})
-		  }
+        total: { type: Number, default: 0 },
+        pager: { type: Object, default: () => ({ pageSize: 10, pageNo: 1 }) }
     },
     data() {
         return {}
     },
     methods: {
         sizeChange(pageSize) {
-            this.pager.pageSize = pageSize;
-            this.$emit('change', this.pager);
+            this.pager.pageSize = pageSize
+            this.$emit('change', this.pager)
         },
         currentChange(pageNo) {
-            this.pager.pageNo = pageNo;
-            this.$emit('change', this.pager);
+            this.pager.pageNo = pageNo
+            this.$emit('change', this.pager)
         }
     }
 }

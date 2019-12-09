@@ -22,13 +22,14 @@
                 </template>
             </el-table-column>
         </el-table>
-	      <lyy-pager :pager="pager" :total="total" @change="pageChange"></lyy-pager>
+        <lyy-pager :pager="pager" :total="total" @change="pageChange"></lyy-pager>
     </div>
 </template>
 
 <script>
+import scope from '../../views/slots/scope'
+
 export default {
-    name: 'companyList',
     data() {
         return {
             currentPage4: 1,
@@ -56,8 +57,8 @@ export default {
             this.httpGetTable()
         },
         pageChange(data) {
-            this.pager = data;
-            this.httpGetTable();
+            this.pager = data
+            this.httpGetTable()
         },
         httpGetTable() {
             const params = Object.assign({}, this.form, this.pager)
@@ -69,7 +70,7 @@ export default {
                     { id: 2, code: 1111, name: '公司' + num, number: num, time: '2016-20-5', operation: '详情' },
                     { id: 3, code: 3333, name: '公司' + num, number: num, time: '2016-20-5', operation: '详情' }
                 ]
-		            this.total = parseInt(Math.random() * 100);
+                this.total = parseInt(Math.random() * 100)
             }, 200)
         },
         getDetails(data) {
