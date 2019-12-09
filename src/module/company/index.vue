@@ -62,8 +62,8 @@ export default {
         httpGetTable() {
             const params = Object.assign({}, this.form, this.pager)
             this.$http.post(this.$service.companyPagingQuery, {params}).then(res => {
-                this.companyList = res.data.data;
-                this.total = res.data.total;
+                this.companyList = res.data;
+                this.total = res.total;
             })
         },
         getDetails(data) {
