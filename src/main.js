@@ -13,9 +13,6 @@ Vue.use(http)
 Vue.prototype.$service = serviceAPI
 Vue.prototype.$publicFunc = pbulicFunc
 Vue.config.productionTip = false
-// axios.defaults.timeout = 5000 // 请求超时
-// axios.defaults.baseURL = 'http://yapi.demo.qunar.com/mock/51540/api/'  // api 即上面 vue.config.js 中配置的地址
-// Vue.prototype.$axios = axios;
 
 Vue.use(ElementUI)
 

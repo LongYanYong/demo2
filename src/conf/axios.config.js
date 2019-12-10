@@ -28,7 +28,7 @@
 
 // 静态配置对象，此对象在 /static/conf/app-conf.js 内配置
 const appConf =  {
-  baseURL: 'http://10.12.1.43:8986/user-rest/'
+  baseURL: 'http://yapi.demo.qunar.com/mock/51540/api/bom/vendor'
 }
 
 /**
@@ -37,7 +37,7 @@ const appConf =  {
  */
 const conf = {
   commonConfig: {
-    baseURL: 'http://yapi.demo.qunar.com/mock/51540/api',
+    baseURL: 'http://yapi.demo.qunar.com/mock/51540/api/bom/vendor',
   },
   root: {}
 }

@@ -1,4 +1,8 @@
 export default {
-    demo: '/demo', // 菜单
-    companyPagingQuery: '/bom/vendor/companyQuery/companyPagingQuery' // 菜单
+    company: {
+        companyPagingQuery: '/companyQuery/companyPagingQuery' // 菜单
+    },
+    profits: {
+        pagingVcVendorRate: 'vendorRateQuery/pagingVcVendorRate'
+    }
 }

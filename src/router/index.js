@@ -99,7 +99,34 @@ const routes = [
             title: '公司详情'
         },
         component: () => import(/* webpackChunkName: "about" */ '../module/company/details/index.vue')
-    }
+    },
+    {
+        path: '/profits',
+        name: 'profits',
+        meta: {
+            canTo: true,
+            title: '毛利润页面'
+        },
+        component: () => import(/* webpackChunkName: "about" */ '../module/profits/index.vue')
+    },
+    {
+        path: '/profitsDetails',
+        name: 'profitsDetails',
+        meta: {
+            canTo: true,
+            title: '毛利润查看页面'
+        },
+        component: () => import(/* webpackChunkName: "about" */ '../module/profits/details/index.vue')
+    },
+    {
+        path: '/profitsEditor',
+        name: 'profitsEditor',
+        meta: {
+            canTo: true,
+            title: '毛利润编辑页面'
+        },
+        component: () => import(/* webpackChunkName: "about" */ '../module/profits/editor/index.vue')
+    },
 ]
 
 const router = new VueRouter({

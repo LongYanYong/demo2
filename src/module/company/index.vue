@@ -57,17 +57,19 @@ export default {
             this.httpGetTable()
         },
         pageChange(data) {
+            console.log(data)
             this.pager = data
             this.httpGetTable()
         },
         httpGetTable() {
             const params = Object.assign({}, this.form, this.pager)
-            this.$http.post(this.$service.companyPagingQuery, {params}).then(res => {
-                this.companyList = res.data.data;
-                this.total = res.data.total;
+            this.$http.post(this.$service.company.companyPagingQuery, params).then(res => {
+                this.companyList = res.data.data
+                this.total = res.data.total
             })
         },
         getDetails(data) {
+            console.log(data)
             this.$router.push({ name: 'companyDetails', query: { id: data.row.id } })
         }
     }
